@@ -9,7 +9,7 @@ import telebot
 from config import *
 import pytz
 
-bot = telebot.TeleBot("5911254681:AAExn3rFlXSPyL-Ih58BUqzpw7UnEgn6d2c")
+bot = telebot.TeleBot("3ae6ca")
 
 
 @bot.message_handler(content_types=['audio', 'photo', 'voice', 'video', 'document',
