@@ -7,6 +7,7 @@ made by complewin
 from datetime import datetime
 import telebot
 from config import *
+import pytz
 
 bot = telebot.TeleBot("5911254681:AAExn3rFlXSPyL-Ih58BUqzpw7UnEgn6d2c")
 
@@ -43,7 +44,8 @@ def callback_worker(call):
 
 
 def week(message):
-    date = str(datetime.now().date()).split('-')
+    tz = pytz.timezone('Europe/Moscow')
+    date = str(datetime.now(tz).date()).split('-')
     if date[2][0] == '0':
         date[2] = date[2][1:]
     if date[1] == '03':
